@@ -1,0 +1,44 @@
+create database hotel;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create table if not exists rooms(id int auto_increment primary key,room_number varchar(10)not null,availability boolean not null default true); 
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into rooms(room_number,availability)values('101',true),('102',true),('103',true),('104',true),('105',true),('106',true),('107',true),('108',true),('109',true),('110',true);
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select *From rooms;
++----+-------------+--------------+
+| id | room_number | availability |
++----+-------------+--------------+
+|  1 | 101         |            1 |
+|  2 | 102         |            1 |
+|  3 | 103         |            1 |
+|  4 | 104         |            1 |
+|  5 | 105         |            1 |
+|  6 | 106         |            1 |
+|  7 | 107         |            1 |
+|  8 | 108         |            1 |
+|  9 | 109         |            1 |
+| 10 | 110         |            1 |
++----+-------------+--------------+
+10 rows in set (0.00 sec)
+
+mysql> create table if not exists users(id int auto_increment primary key,username varchar(50) not null,email varchar(100) not null,password varchar(100)not null);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into users(username,email,password)values('Bhavya','Bhavya@gmail.com','Bhavya@8');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select *from users;
++----+----------+------------------+----------+
+| id | username | email            | password |
++----+----------+------------------+----------+
+|  1 | Bhavya   | Bhavya@gmail.com | Bhavya@8 |
++----+----------+------------------+----------+
+1 row in set (0.00 sec)
+
+mysql> 
+
+
